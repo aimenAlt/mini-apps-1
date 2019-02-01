@@ -6,8 +6,14 @@ var theStyle = {
   "font-size": "200px"
 }
 
-const cell = (props) => (
-  <td id={`${(props.rowNum)}X${props.colNum}` } onClick={props.addPiece} className="empty">  </td>
-);
+
+
+const cell = (props) => {
+  const funct = props.addPiece;
+  const cellID = `${(props.rowNum)}X${props.colNum}`;
+  return (
+    <td id={cellID} onClick={(event) => {funct(cellID, event)}} className="empty">  </td>
+  );
+}
 
 export default cell;

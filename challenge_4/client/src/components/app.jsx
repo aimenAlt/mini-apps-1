@@ -19,7 +19,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Now it Begins</h1>
-        <Board />
+        <Board addPiece={BoardMethods.clickedCell}/>
       </div>);
   }
 }

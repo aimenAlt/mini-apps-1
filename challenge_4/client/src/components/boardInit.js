@@ -12,6 +12,8 @@ module.exports.boardCreator = () => {
   return rows;
 }
 
-// module.exports.clickedCell = (event) => {
-//   console.dir(event);
-// }
+module.exports.clickedCell = (id, event) => {
+  event.preventDefault();
+  console.log(id);
+  console.log(event);
+}
